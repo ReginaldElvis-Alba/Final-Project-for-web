@@ -8,13 +8,14 @@ body{
     background-color: #c9d6ff;
     background: linear-gradient(to right #e2e2e2,#c9d6ff );
 }
- .container{
+.container{
     background-color: #fff;
     width: 450px;
-    padding: 1.5rem;
+    height: 530px; 
+    padding:1.5rem;
     margin: 50px auto;
     border-radius: 10px;
-    box-shadow: 0 20px 35px rgba(red, green, blue, alpha);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
 }
 
 form{
@@ -35,6 +36,7 @@ input{
     border-bottom: 1px solid #757575;
     padding-left: 0.5rem;
     font-size: 15px;
+    
 }
 .input-group{
     padding: 1% 0;
@@ -44,6 +46,7 @@ input{
 .input-group i{
     position: absolute;
     color: black;
+    left: -0.9rem;
 }
 .input:focus{
     background-color: transparent;
@@ -52,30 +55,35 @@ input{
 }
 .input::placeholder{
     color: transparent;
+    line-height: normal;
+    height: auto;
 }
 label{
     color: #757575;
     position: relative;
-    left: 1.2rem;
-    top: -1.3rem;
+    left: 0.5rem;
+    top: 1rem;
     cursor: auto;
+    font-size: 1rem;
     transition: 0.3s ease all;  
 
 }
-.input:focus~label input:not(:placeholder-shown)~label{
-    top: -3em;
+.input:focus~label,
+ input:not(:placeholder-shown)~label{
+    top: 1rem;
     color: hsl(327,90%, 28%);
     font-size: 15px;
 }
 
 .recover{
     text-align: right;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-size: 1rem;
 }
 .recover a{
     text-decoration: none;
     color: rgb(125,125,235);
+    margin-bottom: 1.5rem;
 }
 .recover a:hover{
     color: blue;
@@ -93,6 +101,7 @@ label{
     color: #e2e2e2;
     cursor: pointer;
     transition: 0.9s;
+    margin-top: 1.5rem;
 
 }
 .btn a:hover{
@@ -142,3 +151,4 @@ button:hover{
     color: blue;
 
 }
+ 
