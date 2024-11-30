@@ -1,121 +1,226 @@
-*{
-    padding: 0%;
-    margin: 0%;
+
+
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    
-}
-body{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right #e2e2e2,#c9d6ff );
-}
-.container{
-    background-color: #fff;
-    width: 450px;
-    height: 530px; 
-    padding:1.5rem;
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
 }
 
-form{
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #3f2b96;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3f2b96;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #07001f;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: white;
+    background: url('background.jpg') no-repeat center center/cover;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+}
+
+.intro p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.intro .btn {
+    background: #3f2b96;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.intro .btn:hover {
+    background: #07001f;
+}
+
+/* About and Services Sections */
+.about, .services {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.about h3, .services h3 {
+    color: #3f2b96;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #3f2b96;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #a8c0ff;
+}
+
+/* Login and Registration Styles */
+.container {
+    background-color: #fff;
+    width: 450px;
+    min-height: 800px;
+    height: 5px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+form {
     margin: 0 2rem;
 }
-.form-title{
+
+.form-title {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     padding: 1.3rem;
     margin-bottom: 0.4rem;
 }
-input{
-    color: inherit;
-    width: 100%;
-    background-color:transparent;
-    border: none;
-    border-bottom: 1px solid #757575;
-    padding-left: 0.5rem;
-    font-size: 15px;
-    
-}
-.input-group{
+
+.input-group {
     padding: 1% 0;
     position: relative;
 }
 
-.input-group i{
-    position: absolute;
-    color: black;
-    left: -0.9rem;
+input {
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding-left: 0.5rem;
+    font-size: 15px;
 }
-.input:focus{
+
+input:focus {
     background-color: transparent;
     outline: transparent;
-    border-bottom: 2px solid hsl(327,90%, 28%);
+    border-bottom: 2px solid hsl(327, 90%, 28%);
 }
-.input::placeholder{
+
+input::placeholder {
     color: transparent;
     line-height: normal;
     height: auto;
 }
-label{
+
+label {
     color: #757575;
     position: relative;
     left: 0.5rem;
     top: 1rem;
     cursor: auto;
     font-size: 1rem;
-    transition: 0.3s ease all;  
-
+    transition: 0.3s ease all;
 }
-.input:focus~label,
- input:not(:placeholder-shown)~label{
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
     top: 1rem;
-    color: hsl(327,90%, 28%);
+    color: hsl(327, 90%, 28%);
     font-size: 15px;
 }
 
-.recover{
+.recover {
     text-align: right;
     margin-bottom: 2rem;
     font-size: 1rem;
 }
-.recover a{
+
+.recover a {
     text-decoration: none;
-    color: rgb(125,125,235);
-    margin-bottom: 1.5rem;
+    color: rgb(125, 125, 235);
 }
-.recover a:hover{
+
+.recover a:hover {
     color: blue;
     text-decoration: underline;
-
 }
-.btn{
+
+.btn {
     font-size: 1.1rem;
     padding: 8px 0;
     border-radius: 5px;
     outline: none;
     border: none;
     width: 100%;
-    background-color:rgb(15, 15, 133);
+    background-color: rgb(15, 15, 133);
     color: #e2e2e2;
     cursor: pointer;
-    transition: 0.9s;
+    transition: 0.3s;
     margin-top: 1.5rem;
-
 }
-.btn a:hover{
+
+.btn:hover {
     background-color: #07001f;
 }
-.or{
+
+.or {
     font-size: 1.1rem;
     margin-top: 0.5rem;
     text-align: center;
 }
-.icons{
+
+.icons {
     text-align: center;
 }
-.icons i{
+
+.icons i {
     color: rgb(2, 2, 48);
     padding: 0.8rem 1.5rem;
     border-radius: 10px;
@@ -125,30 +230,30 @@ label{
     margin: 0 15px;
     transition: 1s;
 }
-.icons a:hover{
-    background:#07001f;
+
+.icons a:hover {
+    background: #07001f;
     font-size: 1.6rem;
-    border: 2px solid rgb(125,125,235);
-
-
+    border: 2px solid rgb(125, 125, 235);
 }
-.links{
+
+.links {
     display: flex;
     justify-content: space-around;
     padding: 0 4rem;
     margin-top: 0.9rem;
     font-weight: bold;
 }
-button{
-    color: rgb(125,125,235);
+
+button {
+    color: rgb(125, 125, 235);
     border: none;
     background-color: transparent;
     font-size: 1rem;
     font-weight: bold;
 }
-button:hover{
+
+button:hover {
     text-decoration: underline;
     color: blue;
-
 }
- 

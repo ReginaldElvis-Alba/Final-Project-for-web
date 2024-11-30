@@ -3,6 +3,23 @@ const express=require('express')
 const app=express()
 const dotenv=require('dotenv')
 dotenv.config()
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
+const bcrypt = require("bcryptjs");
+
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(
+    session({
+        secret: "RXFCHFCHFTUTUUCFCFRCRTDRC",
+        resave: false,
+        saveUninitialized: true,
+        cookie: { secure: false }, // Set to true in production
+    })
+);
 
 const pool=mysql2.createPool({
     user:'root',
